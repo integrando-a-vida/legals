@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade — SafeTime</title>
+<style>
+  :root { --blue:#1E4FA3; --blue-d:#0F2557; --bg:#f4f6fa; --card:#ffffff; --txt:#222; --muted:#5b6377; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; background:var(--bg); color:var(--txt); line-height:1.6; }
+  .wrap { max-width:820px; margin:0 auto; padding:24px 18px 64px; }
+  header { text-align:center; background:linear-gradient(135deg,#e8eef9,#dce4f2); border:1px solid rgba(30,79,163,.2); border-radius:16px; padding:32px 20px; margin-bottom:28px; }
+  header .shield { font-size:42px; }
+  header h1 { margin:8px 0 2px; font-size:26px; color:var(--blue-d); }
+  header .sub { color:var(--muted); font-size:14px; }
+  section { background:var(--card); border:1px solid rgba(0,0,0,.08); border-radius:12px; padding:18px 20px; margin-bottom:16px; }
+  section h2 { font-size:18px; color:var(--blue-d); margin:0 0 10px; }
+  section p { margin:0 0 10px; color:#333; }
+  ul { margin:0 0 6px; padding-left:20px; }
+  li { margin-bottom:8px; }
+  a { color:var(--blue); }
+  .highlight { background:#fff8e6; border:1px solid #e6c86a; }
+  .highlight h2 { color:#8a6100; }
+  footer { text-align:center; color:var(--muted); font-size:13px; margin-top:28px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="shield">🛡️</div>
+    <h1>Política de Privacidade — SafeTime</h1>
+    <div class="sub">Última atualização: 23 de julho de 2026</div>
+  </header>
+
+  <section>
+    <h2>1. Introdução</h2>
+    <p>O SafeTime ("nós", "nosso" ou "aplicativo") é um aplicativo de produtividade e bem-estar digital que ajuda você a manter o foco bloqueando aplicativos e sites em horários que você mesmo define. Esta Política de Privacidade descreve como coletamos, utilizamos, armazenamos e protegemos suas informações.</p>
+    <p>O controlador dos dados, nos termos da Lei Geral de Proteção de Dados (LGPD), é <strong>Rafael Lima Furtado</strong>, contatável pelo e-mail <a href="mailto:safetime.iv@gmail.com">safetime.iv@gmail.com</a>.</p>
+  </section>
+
+  <section class="highlight">
+    <h2>2. Uso do Serviço de Acessibilidade (divulgação em destaque)</h2>
+    <p>O SafeTime utiliza a <strong>API de Acessibilidade do Android</strong>. Essa permissão é essencial e existe por um único motivo: <strong>fazer o bloqueio funcionar</strong>. Com ela, o aplicativo:</p>
+    <ul>
+      <li>identifica <strong>qual aplicativo está em primeiro plano</strong>, para exibir a tela de bloqueio quando ele estiver na janela de um agendamento ativo;</li>
+      <li>lê o <strong>endereço exibido na barra do navegador</strong>, para bloquear sites que você incluiu em um agendamento.</li>
+    </ul>
+    <p><strong>Esses dados são processados exclusivamente no seu dispositivo, em tempo real, apenas para decidir se algo deve ser bloqueado naquele instante.</strong> O SafeTime <strong>não</strong> armazena, <strong>não</strong> transmite, <strong>não</strong> compartilha e <strong>não</strong> vende o conteúdo lido pelo serviço de acessibilidade. Nenhum histórico de navegação sai do seu aparelho.</p>
+    <p>Você pode revogar essa permissão a qualquer momento nas configurações do Android. Sem ela, o bloqueio deixa de funcionar.</p>
+  </section>
+
+  <section>
+    <h2>3. Dados Coletados</h2>
+    <p>Para fornecer o serviço, tratamos os seguintes dados:</p>
+    <ul>
+      <li><strong>Dados de cadastro:</strong> nome, endereço de e-mail e identificador de usuário. Ao entrar com o Google, recebemos também a foto de perfil associada à conta.</li>
+      <li><strong>Suas configurações de foco:</strong> agendamentos (nome, horários, dias da semana, ícone), a lista de aplicativos e sites que <em>você escolheu</em> bloquear em cada agendamento, e suas blindagens (nome, modo, temporizador e proteções ativadas).</li>
+      <li><strong>Preferências do aplicativo:</strong> tema (claro/escuro) e preferência de notificações.</li>
+      <li><strong>Estatísticas de uso do dispositivo:</strong> tempo de uso por aplicativo, utilizado apenas para montar a tela de Relatórios.</li>
+      <li><strong>Dados de publicidade:</strong> para exibir anúncios, o Google AdMob coleta identificadores de publicidade, dados de interação com os anúncios, diagnósticos de desempenho do aplicativo e o endereço IP do dispositivo — a partir do qual pode estimar sua <strong>localização aproximada</strong> (nível de cidade ou região). Detalhes na seção 7.</li>
+    </ul>
+    <p>O SafeTime não acessa o GPS e não coleta localização precisa. Também não coletamos contatos, agenda, arquivos pessoais, nem o conteúdo de mensagens.</p>
+  </section>
+
+  <section>
+    <h2>4. Armazenamento e Sincronização</h2>
+    <p>Seus dados ficam armazenados de duas formas:</p>
+    <ul>
+      <li><strong>No seu dispositivo:</strong> em um banco de dados local (SQLite). É essa cópia que faz o bloqueio funcionar, inclusive sem internet.</li>
+      <li><strong>Na nuvem:</strong> seus agendamentos, blindagens e preferências são sincronizados no <strong>Google Cloud Firestore</strong>, para que você possa recuperá-los ao reinstalar o aplicativo ou trocar de aparelho.</li>
+    </ul>
+    <p>Os dados na nuvem ficam armazenados em servidores na região <strong>southamerica-east1 (São Paulo, Brasil)</strong> e são isolados por conta: as regras de segurança do Firestore permitem que cada usuário acesse exclusivamente os próprios dados.</p>
+    <p><strong>As estatísticas de uso do dispositivo não são enviadas para a nuvem</strong> — elas permanecem apenas no seu aparelho.</p>
+  </section>
+
+  <section>
+    <h2>5. Autenticação</h2>
+    <p>Utilizamos o <strong>Firebase Authentication</strong> (Google) para o cadastro e o login, por e-mail e senha ou pela sua conta Google. Sua senha é processada e armazenada diretamente pelo Firebase e <strong>nunca é acessível ao SafeTime em texto simples</strong>. É necessário ter uma conta para utilizar o aplicativo, pois é ela que permite recuperar suas configurações.</p>
+  </section>
+
+  <section>
+    <h2>6. Permissões do Dispositivo</h2>
+    <ul>
+      <li><strong>Acessibilidade:</strong> essencial para o bloqueio. Detalhada na seção 2.</li>
+      <li><strong>Sobreposição de tela:</strong> para exibir a tela de bloqueio por cima do aplicativo bloqueado.</li>
+      <li><strong>Acesso a estatísticas de uso:</strong> para a tela de Relatórios.</li>
+      <li><strong>Acesso a notificações:</strong> quando concedida, permite que o SafeTime <strong>oculte notificações de aplicativos bloqueados</strong> durante uma janela de bloqueio, para que elas não interrompam seu foco. O conteúdo das notificações não é lido, armazenado nem transmitido.</li>
+      <li><strong>Internet:</strong> para autenticação, sincronização e exibição de anúncios.</li>
+    </ul>
+    <p>As permissões são solicitadas de forma transparente e podem ser revogadas a qualquer momento nas configurações do Android. Revogá-las desativa as funcionalidades correspondentes.</p>
+  </section>
+
+  <section>
+    <h2>7. Serviços de Terceiros</h2>
+    <ul>
+      <li><strong>Firebase Authentication (Google):</strong> autenticação de usuários.</li>
+      <li><strong>Cloud Firestore (Google):</strong> sincronização das suas configurações.</li>
+      <li><strong>Google AdMob:</strong> exibição de anúncios. O AdMob coleta identificadores de publicidade (como o ID de publicidade do Android), dados de interação com os anúncios, diagnósticos de desempenho e o endereço IP do dispositivo, usado para estimar a <strong>localização aproximada</strong> e exibir anúncios mais relevantes. Esses dados são compartilhados com o Google e tratados conforme a <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade do Google</a>. Você pode redefinir ou excluir o ID de publicidade a qualquer momento nas configurações do Android (Google → Anúncios).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>8. Compartilhamento de Dados</h2>
+    <p>Não vendemos, alugamos nem compartilhamos suas informações pessoais para fins comerciais. Seus dados podem ser compartilhados apenas:</p>
+    <ul>
+      <li>com os provedores essenciais à operação do aplicativo (Google/Firebase);</li>
+      <li>quando exigido por lei ou ordem judicial;</li>
+      <li>mediante seu consentimento explícito.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>9. Segurança</h2>
+    <p>Adotamos medidas técnicas para proteger seus dados, incluindo:</p>
+    <ul>
+      <li>tráfego criptografado (HTTPS/TLS) entre o aplicativo e os servidores;</li>
+      <li>autenticação gerenciada pelo Firebase;</li>
+      <li>regras de segurança que isolam os dados de cada conta na nuvem.</li>
+    </ul>
+    <p>Ainda assim, nenhum método de transmissão ou armazenamento eletrônico é totalmente seguro, e não é possível garantir segurança absoluta.</p>
+  </section>
+
+  <section>
+    <h2>10. Seus Direitos (LGPD)</h2>
+    <p>Você tem direito a:</p>
+    <ul>
+      <li>acessar seus dados pessoais;</li>
+      <li>corrigir dados incorretos ou desatualizados;</li>
+      <li>solicitar a exclusão dos seus dados e da sua conta;</li>
+      <li>revogar consentimentos;</li>
+      <li>solicitar a portabilidade dos dados.</li>
+    </ul>
+    <p>Para exercer qualquer um desses direitos, escreva para <a href="mailto:safetime.iv@gmail.com">safetime.iv@gmail.com</a>.</p>
+  </section>
+
+  <section>
+    <h2>11. Retenção e Exclusão</h2>
+    <p>Mantemos seus dados enquanto sua conta existir. Você pode excluí-la a qualquer momento diretamente no aplicativo, em <strong>Ajustes → Conta → Excluir conta</strong>: isso remove seus dados da nuvem e encerra sua conta de autenticação. Desinstalar o aplicativo apaga a cópia local do seu dispositivo. Veja a página de <a href="account-deletion.html">Exclusão de Conta</a> para todos os caminhos disponíveis.</p>
+  </section>
+
+  <section>
+    <h2>12. Uso por Menores</h2>
+    <p>O SafeTime não é destinado a menores de 13 anos e não coletamos intencionalmente informações de crianças nessa faixa etária. Se você acredita que uma criança nos forneceu dados pessoais, entre em contato para que possamos removê-los.</p>
+  </section>
+
+  <section>
+    <h2>13. Alterações nesta Política</h2>
+    <p>Podemos atualizar esta Política periodicamente para refletir mudanças no aplicativo ou na legislação. A data da última atualização é sempre indicada no topo deste documento.</p>
+  </section>
+
+  <section>
+    <h2>14. Contato</h2>
+    <p>Dúvidas, solicitações ou preocupações sobre esta Política ou sobre o tratamento dos seus dados:</p>
+    <p>📧 E-mail: <a href="mailto:safetime.iv@gmail.com">safetime.iv@gmail.com</a></p>
+    <p>Responderemos no prazo máximo de 15 dias úteis.</p>
+  </section>
+
+  <footer>
+    <p>Seu foco e sua privacidade são nossa prioridade.<br>© 2026 SafeTime — Rafael Lima Furtado. Todos os direitos reservados.</p>
+  </footer>
+</div>
+</body>
+</html>

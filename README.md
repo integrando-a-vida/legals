@@ -9,6 +9,7 @@ Páginas legais dos produtos da organização, publicadas via GitHub Pages.
 | Produto | URL |
 |---|---|
 | Stoqly | https://integrando-a-vida.github.io/legals/stoqly/ |
+| SafeTime | https://integrando-a-vida.github.io/legals/safetime/ |
 
 ## Adicionar um novo produto
 
